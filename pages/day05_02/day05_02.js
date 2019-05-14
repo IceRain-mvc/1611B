@@ -6,7 +6,8 @@ Page({
    */
   data: {
     name:"",
-    newObj:{}
+    newObj:{},
+    city:""
   },
 
   jump(){

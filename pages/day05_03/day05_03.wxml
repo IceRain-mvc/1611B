@@ -3,3 +3,8 @@
 <navigator url='/pages/day05_04/day05_04'>
   <button>跳转到4</button>
 </navigator>
+
+<view wx:for="{{cityList}}">
+  <view bindtap='selectCity' data-item='{{item}}'>{{item}}</view>
+</view>
+

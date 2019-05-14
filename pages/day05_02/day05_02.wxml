@@ -1,10 +1,7 @@
-<!--pages/day05_02/day05_02.wxml-->
-<text>pages/day05_02/day05_02.wxml</text>
 
-<button bindtap='jump'>跳转到3</button>
-
+<button bindtap='jump'>选择城市</button>
 {{name}}
-
 <view>地址:{{newObj.title}}</view>
 <view>详细地址:{{newObj.address}}</view>
 
+<view style="font-size:50rpx">你选择的城市是:{{city}}</view>
