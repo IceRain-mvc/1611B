@@ -1,0 +1,3 @@
+<image class='iconTop' src="{{iconPath}}"></image>
+<view class='tab_text'>{{text}}</view>
+<view wx:if="{{showDot}}" class='dot'></view>

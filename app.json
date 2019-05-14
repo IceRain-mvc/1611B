@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/day05/day05",
+    "pages/day05_02/day05_02",
+    "pages/zhoukao1/index",
+    "pages/day04/day04",
+    "pages/day03/day03",
+    "pages/day02_02/day02_02",
+    "pages/day02_03/day02_03",
+    "pages/day02/index",
+    "pages/day01/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "networkTimeout":{
+    "request":6000
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#201D1D",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar":{
+    "position":"top",
+    "color":"#00eeff",
+    "selectedColor":"#ccddee",
+    "backgroundColor":"#000000",
+    "list":[
+      {
+        "text":"首页",
+        "pagePath":"pages/day02_02/day02_02",
+        "iconPath":"images/icon_seo.png",
+        "selectedIconPath":"images/icon_seo_HL.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_speed.png",
+        "selectedIconPath": "images/icon_speed_HL.png"
+      }
+    ]
+  }
+}

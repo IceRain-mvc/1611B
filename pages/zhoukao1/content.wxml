@@ -1,0 +1,10 @@
+<template name="content">
+  <view wx:if="{{content}}">
+    <view>{{content}}</view>
+    <view class='content_tags'>{{tags}}</view>
+  </view>
+  <view wx:else>
+    <view>内容11111111111111</view>
+    <view class='content_tags'>vip1</view>
+  </view>
+</template>

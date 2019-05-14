@@ -1,0 +1,22 @@
+<!--pages/day01/index.wxml-->
+<text>pages/day01/index.wxml</text>
+<view>
+  <view class='box'>上</view>
+  <view class='box'>中</view>
+  <view>下</view>
+  <button class='btn'>按钮</button>
+
+  <view>{{name}}</view>
+</view>
+
+
+<view wx:for="{{list}}" wx:for-item="aaa" wx:key="index" wx:for-index="bbb">
+  {{aaa.name}} {{bbb}}
+
+  <button class='btn' type='warn' bindtap="click" data-child='{{bbb}}'> {{aaa.name}} </button>
+
+</view>
+
+<view>
+  {{text}}
+</view>

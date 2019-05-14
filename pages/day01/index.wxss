@@ -1,0 +1,17 @@
+/* pages/day01/index.wxss */
+
+.box {
+  display: inline;
+}
+
+/* 
+
+rem  window document
+rpx  
+
+*/
+
+.btn {
+  width: 200rpx;
+  display: inline-block;
+}

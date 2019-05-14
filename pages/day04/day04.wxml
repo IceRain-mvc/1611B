@@ -1,0 +1,9 @@
+<!--pages/day04/day04.wxml-->
+<text>pages/day04/day04.wxml</text>
+<child toChild="{{name}}" toChild2="{{name}}" toChild3="{{obj}}"></child>
+<child></child>
+<child></child>
+<child></child>
+<child bind:myChildEvent="receiverValue"></child>
+
+

@@ -1,0 +1,32 @@
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{200}}" vertical="{{false}}">
+  <block wx:for="{{images}}">
+    <swiper-item>
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<button class="default" size="default" type="default" plain="default" disabled="false" loading="false" 
+  hover-class="button-hover" hover-stop-propagation="false" 
+   form-type="submit|reset" open-type="contact|share|getUserInfo|openSetting|feedback" >
+  
+</button>
+
+<template name="aaa">
+  <view>
+    饺子
+  </view>
+</template>
+
+<template name="bbb">
+  <view>
+    臊子面
+  </view>
+</template>
+
+<template is="aaa"></template>
+
+<view>
+  <block wx:for="{{[1,2,3,4,5,6,7]}}">
+      <template is="{{item%2==0?'aaa':'bbb'}}"></template>
+  </block>
+</view>

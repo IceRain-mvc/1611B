@@ -1,0 +1,5 @@
+<!--pages/day05/day05.wxml-->
+<text>pages/day05/day05.wxml</text>
+<navigator url='/pages/day05_02/day05_02'>
+  <button>跳转新的页面</button>
+</navigator>

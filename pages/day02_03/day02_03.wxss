@@ -1,0 +1,4 @@
+/* pages/day02_03/day02_03.wxss */
+.scrollView {
+    height: 500rpx
+}

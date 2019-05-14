@@ -1,0 +1,5 @@
+/* pages/day03/day03.wxss */
+
+.checkBox{
+  display: block
+}

@@ -1,0 +1,20 @@
+/* pages/zhoukao1/index.wxss */
+
+.nav_scroll {
+  background-color: #201d1d;
+  height: 240rpx;
+  text-align: center
+}
+
+.nav {
+  display: flex;
+}
+
+.navlist {
+  margin: 20rpx 50rpx;
+}
+.content_tags{
+  font-style: bold;
+  font-size: 50rpx;
+  color: red
+}

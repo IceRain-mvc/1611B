@@ -1,0 +1,19 @@
+/* components/tabTop/tabtop.wxss */
+
+.iconTop{
+  width: 91rpx;
+  height: 102rpx;
+}
+
+.tab_text{
+  color: #ffffff;
+  font-size: 24rpx
+}
+
+.dot{
+  width: 0;
+  height: 0;
+  border: 20rpx solid transparent;
+  border-bottom: 20rpx solid #ffffff;
+  margin: 0 auto
+}

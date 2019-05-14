@@ -1,0 +1,9 @@
+<!--components/child/Child.wxml-->
+<text>components/child/Child.wxml</text>
+<view class='child'>我是组件</view>
+
+<view>{{toChild}}</view>
+<view>{{toChild2}}</view>
+<view>{{toChild3.name2}}</view>
+
+<button bindtap='paseValueToPrarent'>向父组件传值</button>
