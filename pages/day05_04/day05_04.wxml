@@ -1,0 +1,8 @@
+<!--pages/day05_04/day05_04.wxml-->
+<text>pages/day05_04/day05_04.wxml</text>
+<input type='number' placeholder='请输入回到的层数' bindinput='inputChange'></input>
+
+<navigator open-type='navigateBack' delta="{{num}}">
+  <button>回到层数{{num}}</button>
+</navigator>
+

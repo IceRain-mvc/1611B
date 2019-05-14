@@ -1,68 +1,53 @@
-// pages/day05/day05.js
+// pages/day05_04/day05_04.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:"樱桃小丸子",
-    obj:{
-      title:"广东",
-      address:"广东东莞"
-    }
+    num:1
   },
 
-  jump(){
-    //this.data.obj  Object-->String
-    //接收:  转化成Object
-
-    let stringObj = JSON.stringify(this.data.obj)
-
-    wx.navigateTo({
-      url: '/pages/day05_02/day05_02?name=' + this.data.name + '&obj=' + stringObj ,
+  inputChange(event){
+    let num = parseInt(event.detail.value)
+    this.setData({
+      num:num
     })
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //请求数据
-    //获取缓存
-    //setData({})
-    console.log("pageDay05------onLoad")
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    console.log("pageDay05------onReady")
-    //loading动画消失
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("pageDay05------onShow")
-    //页面显示之前
-    // 加载动画
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    console.log("pageDay05------onHide")
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    console.log("pageDay05------onUnload")
+
   },
 
   /**

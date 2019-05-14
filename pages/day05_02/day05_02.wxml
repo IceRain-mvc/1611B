@@ -1,2 +1,10 @@
 <!--pages/day05_02/day05_02.wxml-->
 <text>pages/day05_02/day05_02.wxml</text>
+
+<button bindtap='jump'>跳转到3</button>
+
+{{name}}
+
+<view>地址:{{newObj.title}}</view>
+<view>详细地址:{{newObj.address}}</view>
+

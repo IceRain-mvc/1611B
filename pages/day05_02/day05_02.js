@@ -5,6 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
+    name:"",
+    newObj:{}
+  },
+
+  jump(){
+    wx.navigateTo({
+      url: '/pages/day05_03/day05_03',
+    })
 
   },
 
@@ -12,6 +20,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
+    let newObj = JSON.parse(options.obj)
+    this.setData({
+      name:options.name,
+      newObj: newObj
+    })
     //请求数据
     //获取缓存
     //setData({})
