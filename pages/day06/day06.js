@@ -1,33 +1,26 @@
-// pages/day05_03/day05_03.js
+// pages/day06/day06.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    cityList:[
-      "北京","东京","巴黎","巴厘岛","凤凰古镇"
-    ]
+    index:-1,
+    array: ["帅锅", "美女", "未知"], 
+    time:"08:30"
   },
 
-  selectCity(event){
-    let {item} = event.target.dataset;
-    console.log(item)
-
-    //1:值 获取 到  放到上一个页面 city
-    //本地存储
-    let current =getCurrentPages();
-    //current : 数组
-    let page2This = current[current.length-2]
-
-    page2This.setData({
-      city:item
+  pickerChanger(event){
+    console.log(event)
+    this.setData({
+      index: event.detail.value
     })
 
-    console.log(current)
-    //2:页面销毁 跳过去
-    wx.navigateBack({
-      
+  },
+
+  pickerTime(event){
+    this.setData({
+      time:event.detail.value
     })
 
   },
@@ -36,35 +29,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log("onLoad")
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log("onReady")
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log("onShow")
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log("onHide")
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log("onUnload")
   },
 
   /**

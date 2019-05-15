@@ -1,0 +1,10 @@
+<child-life></child-life>
+
+<picker value='{{index}}' range='{{array}}' bindchange='pickerChanger'>
+  <view>你选择的是:{{array[index]}}</view>
+</picker>
+
+
+<picker mode="time" value="{{time}}" start="08:30" end="12:00" bindchange='pickerTime'>
+  <view>你选择的时间是:{{time}}</view>
+</picker>
