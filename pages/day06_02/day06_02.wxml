@@ -1,0 +1,8 @@
+<view>
+  <block wx:for="{{content}}">
+    <image src='{{item.content.object.photo80}}'></image>
+    <view></view>
+    <!-- java  php  go python node -->
+    <text>{{item.content.object.name}}</text>
+  </block>
+</view>

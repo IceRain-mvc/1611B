@@ -1,0 +1,7 @@
+/* pages/day07/day07.wxss */
+
+.icon{
+  width: 80rpx;
+  height: 70rpx;
+  padding: 0 20rpx;
+}

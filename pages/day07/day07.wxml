@@ -1,0 +1,9 @@
+<view>请点击下面图中的 {{obj.imageName}} 以获取验证码</view>
+<image class='icon' src='/images/refresh.png'></image>
+
+<view>
+  <block wx:for="{{obj.values}}" wx:key="index">
+    <image bindtap='clickImg' data-index='{{index}}' class='icon' src='https://auth_services.teambition.com/captcha/image?uid={{obj.uid}}&lang=zh&index={{index}}'></image>
+  </block>
+</view>
+
