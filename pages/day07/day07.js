@@ -8,19 +8,22 @@ Page({
     obj:{}
   },
 
+  requestData(){
+    wx.request({
+      url: 'https://auth_services.teambition.com/captcha/setup?num=5&lang=zh',
+      success: (res) => {
+        this.setData({
+          obj: res.data
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://auth_services.teambition.com/captcha/setup?num=5&lang=zh',
-      success:(res)=>{
-        this.setData({
-          obj:res.data
-        })
-      }
-
-    })
+    this.requestData();
   },
 
   clickImg(event){ // change
@@ -33,18 +36,29 @@ Page({
           wx.showModal({
             title: '验证结果',
             content: '正确',
+            success:()=>{
+              this.requestData();
+            }
           })
         }else{
           wx.showModal({
             title: '验证结果',
             content: '错误',
+            success:()=>{
+              this.requestData();
+            }
           })
         }
-
+        
       }
 
     })
   },
+
+  refresh(){
+    this.requestData();
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

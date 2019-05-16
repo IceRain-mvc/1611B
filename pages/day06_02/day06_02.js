@@ -1,12 +1,32 @@
 // pages/day06_02/day06_02.js
 Page({
-
   /**
    * 页面的初始数据
+   * offset:偏移量-->页数
+   * 
    */
   data: {
     content:[],
-    limit:20
+    limit:20,
+    offset:0,
+    q:"泡面"
+  },
+
+  //传参 变:参数  不变:
+  //q limit offset
+  requestData(q,limit,offset){
+    wx.request({
+      url: 'https://www.xiachufang.com/juno/weapp/v2/search/universal_search.json?q='+q,
+      data: {
+        limit: limit,
+        offset: offset
+      },
+      success: (res) => {
+        this.setData({
+          content: res.data.content.content
+        })
+      }
+    })
   },
 
   /**
@@ -14,15 +34,7 @@ Page({
    */
   onLoad: function (options) {
     let content = [];
-    wx.request({
-      url: 'https://www.xiachufang.com/juno/weapp/v2/search/universal_search.json?q=土豆',
-      data:{},
-      success:(res)=>{
-        this.setData({
-          content: res.data.content.content
-        })
-      }
-    })
+    this.requestData(this.data.q, this.data.limit, this.data.offset);
   },
 
   /**
@@ -57,29 +69,21 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+    this.setData({
+      offset:this.data.offset+1,
+      limit:20
+    })
+    this.requestData(this.data.q,this.data.limit,this.data.offset);
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log("我是有底线的")
-    //加载更多数据
-    wx.request({
-      url: 'https://www.xiachufang.com/juno/weapp/v2/search/universal_search.json?q=土豆',
-      data: {
-        limit: this.data.limit+5
-      },
-      success: (res) => {
-        this.setData({
-          content: res.data.content.content
-        })
-        this.setData({
-          limit:this.data.limit+5
-        })
-      }
+    this.setData({
+      limit: this.data.limit + 5
     })
+    this.requestData(this.data.q, this.data.limit, this.data.offset);
 
   },
 

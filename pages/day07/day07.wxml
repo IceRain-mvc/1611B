@@ -1,5 +1,5 @@
 <view>请点击下面图中的 {{obj.imageName}} 以获取验证码</view>
-<image class='icon' src='/images/refresh.png'></image>
+<image bindtap='refresh' class='icon' src='/images/refresh.png'></image>
 
 <view>
   <block wx:for="{{obj.values}}" wx:key="index">
