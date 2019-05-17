@@ -1,0 +1,32 @@
+<view>
+  <view class='top'>
+  <!--  -->
+    <view class='{{flag?"normal":"select"}}' bindtap='tabChange' data-show='1'>公共科目</view>
+    <view class='{{flag?"select":"normal"}}' bindtap='tabChange' data-show='2'>专业科目</view>
+  </view>
+    <scroll-view scroll-y hidden='{{flag}}' class='scroll'>
+      <checkbox-group bindchange="changeItem1">
+        <label wx:for="{{public}}" wx:key="index">
+          <view class='item'>
+            <text>{{item.name}}</text>
+            <checkbox value='{{index}}'></checkbox>
+          </view>
+        </label>
+      </checkbox-group>
+    </scroll-view>
+    
+    <scroll-view scroll-y hidden='{{!flag}}' class='scroll'>
+      <checkbox-group bindchange="changeItem2">
+        <label wx:for="{{major}}" wx:key="index">
+          <view class='item'>
+            <text>{{item.name}}</text>
+            <checkbox value='{{index}}'></checkbox>
+          </view>
+        </label>
+      </checkbox-group>
+    </scroll-view>
+    
+
+  
+    <button type="primary" class='btn_save' bindtap='save'>保存</button>
+</view>

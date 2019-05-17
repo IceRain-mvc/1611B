@@ -43,8 +43,6 @@ Page({
         content: res.content.content
       })
     }, this)
-
-
   },
 
   /**

@@ -6,6 +6,7 @@ export default function wxRequest(obj, cb, page) {
       url: obj.url,
       method: obj.method || 'GET',
       header: obj.header || {},
+      dataType: obj.dataType||"json",
       data: obj.data,
       success(res) {
         cb && cb.call(page,res.data)
